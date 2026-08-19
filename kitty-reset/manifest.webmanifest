@@ -1,0 +1,15 @@
+{
+  "name": "Kitty Reset Tracker",
+  "short_name": "Kitty Reset",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#111827",
+  "description": "A private, local 21-day tracker for Kitty's litter-box reset, daily checks and accident logging.",
+  "icons": [
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
