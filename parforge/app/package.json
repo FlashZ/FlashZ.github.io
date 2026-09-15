@@ -1,0 +1,40 @@
+{
+  "name": "parforge",
+  "version": "0.1.0",
+  "description": "Modern automatic PAR2 repair and RAR extraction for Windows",
+  "main": "main.js",
+  "author": "FlashZ",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "dev.flashz.parforge",
+    "productName": "ParForge",
+    "asar": true,
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json",
+      "LICENSE"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "ParForge-Beta-0.1.0-win-x64.${ext}"
+    }
+  }
+}
