@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ParForge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">PF</span><div><strong>ParForge</strong><small>Repair. Extract. Done.</small></div></div>
+    <div id="runState" class="pill">Starting…</div>
+  </header>
+  <main>
+    <section class="hero-panel">
+      <div>
+        <p class="eyebrow">AUTOMATIC POST-PROCESSING</p>
+        <h1>Drop files in. Get repaired, extracted files out.</h1>
+        <p class="lede">A modern successor to the old PAR + RAR watch-folder workflow. ParForge watches your folders, waits until downloads are stable, repairs PAR2 sets and extracts RAR archives.</p>
+      </div>
+      <button id="processNow" class="primary">Process a folder</button>
+    </section>
+
+    <section class="grid tools">
+      <article><div class="status-dot" id="parDot"></div><div><strong>PAR2 engine</strong><p id="parStatus">Checking…</p></div><button id="installPar" class="small">Install / refresh</button></article>
+      <article><div class="status-dot" id="zipDot"></div><div><strong>7-Zip</strong><p id="zipStatus">Checking…</p></div><button id="choose7" class="small">Choose 7z.exe</button></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><p class="eyebrow">WATCH FOLDERS</p><h2>Automatic processing</h2></div><button id="addWatch" class="secondary">+ Add folder</button></div>
+      <div id="watchList" class="watch-list"></div>
+      <div class="settings-row">
+        <label class="switch"><input id="autoRun" type="checkbox"><span></span></label><div><strong>Auto-process stable sets</strong><small>ParForge never deletes source files in this beta.</small></div>
+        <label class="number">Wait <input id="quietSeconds" type="number" min="5" max="600"> sec after last file change</label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><p class="eyebrow">ACTIVITY</p><h2>Recent work</h2></div><span class="muted">Last 40 events</span></div>
+      <div id="history" class="history"></div>
+    </section>
+  </main>
+  <footer><span>ParForge beta 0.1.0 · local-first · no telemetry</span><a href="#" id="siteLink">Project site</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
